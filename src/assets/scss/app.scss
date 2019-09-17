@@ -1,0 +1,589 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-flex-grid;
+//
+@include foundation-xy-grid-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-flex-classes;
+
+// @include foundation-prototype-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+.hello {
+  font-size: 20px;
+  color: red;
+  background: #444;
+}
+
+.grid-container{
+ // border: 1px solid red;
+ max-width: 65rem;
+ background: #000;
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+// Hero Section
+
+.marketing-site-hero {
+  //margin-bottom: 10px;
+  background: url(/assets/img/blackrod.jpg) no-repeat;
+  height: $marketing-site-hero-height;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 40em) {
+    background-position: center center;
+  }
+}
+
+.marketing-site-hero-content {
+  max-width: $global-width;
+  margin: 0 auto;
+  padding-top: 6%;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  h1 {
+    font-size: 32px;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+  }
+
+  .button.round {
+    border-radius: 5000px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 40em) {
+    padding-left: 50%;
+  }
+}
+
+.subheader {
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000000;
+  font-size: 18px;
+  background: #888;
+  opacity: 0.80;
+}
+
+// End Hero Section
+
+
+// Top-Bar navigation
+
+.topbar-responsive {
+  background: $topbar-responsive-bg;
+  padding: 0.15rem 1.0rem;
+
+  .topbar-responsive-logo {
+    color: #fff;
+    vertical-align: middle;
+    font-family: Vollkorn SC;
+    font-size: 24px;
+  }
+
+  .menu {
+    background: $topbar-responsive-bg;
+
+    li:last-of-type {
+      margin-right: 0;
+    }
+
+    a {
+      font-size: 14px;
+      color: $white;
+      transition: color 0.15s ease-in;
+
+      &:hover {
+        color: lighten($topbar-responsive-bg, 60%);
+      }
+
+      @media screen and (max-width: 39.9375em) {
+        padding: 0.875rem 0;
+      }
+    }
+
+    .topbar-responsive-button {
+      color: $white;
+      border-color: $white;
+      border-radius: 5000px;
+      transition: color 0.15s ease-in, border-color 0.15s ease-in;
+
+      &:hover {
+        color: lighten($topbar-responsive-bg, 60%);
+        border-color: lighten($topbar-responsive-bg, 60%);
+      }
+
+      @media screen and (max-width: 39.9375em) {
+        width: 100%;
+        margin: 0.875rem 0;
+      }
+    }
+  }
+
+   @media screen and (max-width: 39.9375em) {
+     padding: 0.75rem;
+
+    .top-bar-title {
+      position: relative;
+      width: 100%;
+
+      span {
+        position: absolute;
+        right: 0;
+        border: 1px solid $white;
+        border-radius: 5px;
+        padding: 0.25rem 0.45rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .menu-icon {
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  } to {
+    opacity:1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@include breakpoint(small only) {
+  .topbar-responsive-links {
+    animation-fill-mode: both;
+    animation-duration: 0.5s;
+    width: 100%;
+
+    @if $topbar-responsive-animation-type == slide-down {
+      animation: slideDown 1s ease-in;
+    } @else if $topbar-responsive-animation-type == fade-in {
+      animation: fadeIn 1s ease-in;
+    } @else {
+      animation: none;
+    }
+  }
+}
+// End Top-Bar navigation
+
+// Center Content Section
+
+.center-wrapper {
+  background: #000;
+  padding-top: 10px;
+  border-bottom: 1px solid #fff;
+}
+
+.center-content {
+  background: #000;
+  //border-bottom: 1px solid #fff;
+  h1 {
+    //margin-bottom: 10px;
+    font-size: 22px;
+  }
+}
+//End Center Content
+
+// Main Info Section
+
+.main-info {
+  background: #000;
+  //font-size: 20px;
+  //color: red;
+  margin-bottom: 10px;
+  //padding-left: 5px;
+  //background: #444;
+  border-right: 1px solid #fff;
+  //Remove this after adding content
+  //height: 400px;
+
+  .main-thead {
+    margin-top: 3%;
+    padding-left: 10px;
+    //border-bottom: 1px solid #fff;
+    //background: #888;
+    color: #9e1111;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 18px;
+    //border-bottom: 1px solid #fff;
+  }
+}
+
+.main-body{
+  margin-top: 3%;
+  padding-left: 20px;
+  color: #fff;
+}
+
+.article-row-section {
+  @include flex-grid-row(null, $global-width, 12);
+  justify-content: center;
+}
+
+.article-row-section-inner {
+  @include flex-grid-column(12);
+
+  @include breakpoint(medium) {
+    @include flex-grid-column(10);
+  }
+}
+
+.article-row-section-header {
+  padding: 1.5rem 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.article-row {
+  display: flex;
+  flex-direction: column;
+  //border-top: 1px solid $light-gray;
+  padding: 1.5rem 0;
+
+   @include breakpoint(medium) {
+    flex-direction: row;
+  }
+}
+
+.article-row-img img {
+  width: 100%;
+
+  @include breakpoint(medium) {
+    max-width: none;
+    width: auto;
+  }
+}
+
+.article-row-content {
+  padding: 1.5rem 0 0;
+  color: #fff;
+
+  @include breakpoint(medium) {
+    padding: 0 0 0 1.5rem;
+  }
+}
+
+.article-row-content-header {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.article-row-content-description {
+  font-size: 0.85rem;
+}
+
+.article-row-content-author,
+.article-row-content-time {
+  font-size: 0.875rem;
+  margin-bottom: 0;
+  color: $dark-gray;
+}
+
+.article-row-reversed {
+  .article-row-content {
+    order: 2;
+    padding: 0 1.5rem 0 0;
+  }
+
+  .article-row-img {
+    order: 1;
+    padding: 0 0 1.5rem 0;
+  }
+
+  @include breakpoint(medium) {
+    .article-row-content {
+      order: 1;
+    }
+
+    .article-row-img {
+      order: 2;
+    }
+  }
+}
+
+//End Main Info Section
+
+//Rgt-Side-Info Section
+
+.rgt-side-info {
+  background: #000;
+  //font-size: 20px;
+  color: red;
+  margin-bottom: 10px;
+  //background: #444;
+  //border: 1px solid #fff;
+  //Remove this after adding content
+  height: 400px;
+
+  .rgt-thead {
+    color: #888;
+    margin-top: 6.3%;
+    //border-bottom: 1px solid#fff;
+
+    hr {
+      //width: 70%;
+      margin-left: 0;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
+
+.promo-box {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 0 10px 0;
+
+  .promo-head {
+    color: #777;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .promo-offer {
+    color: #777;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
+
+//End Rgt-Side-Info
+
+// About Page Styles
+
+.about-info {
+
+  margin-bottom: 10px;
+  padding-left: 20px;
+
+}
+
+.four-up-feature {
+  text-align: center;
+  h4 {
+    font-size: 1.00rem;
+  }
+
+  .four-up-feature-header {
+    margin-bottom: 3rem;
+    display: flex;
+    h2 {
+      font-size: 1.5rem;
+    }
+    h5 {
+      font-size: 1.00rem;
+    }
+  }
+
+  .four-up-feature-image {
+    border-radius:  50%;
+    margin-bottom: 2rem;
+    h4 {
+      font-size: .75rem;
+    }
+  }
+
+  .four-up-feature-text {
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: .75rem;
+  }
+}
+
+//End About Page Styles
+
+// Services Page
+
+.serv-msg {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  background: #202020;
+  font-size: 28px;
+  text-align: center;
+}
+
+.serv-cont {
+  margin-top: 10px;
+  border: 1px solid #fff;
+}
+
+.servrgt-cont {
+  margin-top: 10px;
+  margin-right: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #fff;
+  width: 100%;
+
+  p {
+    text-align: center;
+  }
+}
+
+// Footer
+
+.marketing-site-footer {
+  background: $marketing-site-footer-bg;
+  color: lighten($marketing-site-footer-bg, 40%);
+  padding: 2rem 0 0;
+
+  .marketing-site-footer-menu-social a {
+    color: $white;
+  }
+
+  .column-block {
+    margin-bottom: 30px;
+  }
+
+  > .row {
+    margin-bottom: 1rem;
+  }
+
+  @include breakpoint(small only) {
+    .columns {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.marketing-site-footer-name {
+  color: $white;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.footer-desc {
+  font-size: 0.85rem;
+}
+
+.marketing-site-footer-title {
+  color: $white;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.marketing-site-footer-block {
+  display: flex;
+  margin-bottom: 1rem;
+
+  .fa {
+    font-size: 2rem;
+    color: darken($marketing-site-footer-bg, 20%);
+  }
+
+  p {
+    margin-left: 1rem;
+    line-height: 1.125rem;
+  }
+}
+
+.marketing-site-footer-bottom {
+  background: darken($marketing-site-footer-bg, 20%);
+  padding: 1rem 0;
+
+  p,
+  .menu {
+    margin-bottom: 0;
+  }
+
+  .marketing-site-footer-bottom-links {
+    justify-content: flex-end;
+
+    a {
+      color: lighten($marketing-site-footer-bg, 40%);
+      font-size: 14px;
+    }
+
+    @include breakpoint(medium down) {
+      justify-content: center;
+    }
+  }
+
+  @include breakpoint(medium down) {
+    text-align: center;
+  }
+}
+
+.copy-rgt {
+  font-size: 14px;
+}
+
+//End Footer
