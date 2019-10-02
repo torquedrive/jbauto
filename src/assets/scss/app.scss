@@ -60,7 +60,7 @@
 
 .grid-container{
  // border: 1px solid red;
- max-width: 65rem;
+ max-width: 75rem;
  background: #000;
 }
 
@@ -295,7 +295,7 @@ body {
   @include flex-grid-column(12);
 
   @include breakpoint(medium) {
-    @include flex-grid-column(10);
+    @include flex-grid-column(12);
   }
 }
 
