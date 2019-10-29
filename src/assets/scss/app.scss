@@ -130,7 +130,7 @@ body {
   padding: 0.15rem 1.0rem;
 
   .topbar-responsive-logo {
-    color: #fff;
+    color: #fda00a;
     vertical-align: middle;
     font-family: Vollkorn SC;
     font-size: 24px;
@@ -404,7 +404,7 @@ body {
 
 .promo-box {
   color: #fff;
-  border: 1px solid #fff;
+  //border: 1px solid #fff;
   padding: 10px 0 10px 0;
 
   .promo-head {
@@ -421,6 +421,17 @@ body {
     font-size: 14px;
     font-weight: 500;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
+
+.promo-button {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #fda00a;
+  border-radius: 20px 20px;
+
+  a {
+    color: #fff;
   }
 }
 
@@ -501,8 +512,8 @@ body {
 
 // Footer
 
-.bottom-line {
-  color: #FDA00A;
+hr {
+  border: 1px solid #fda00a;
 }
 
 .marketing-site-footer {
