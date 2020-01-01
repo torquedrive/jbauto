@@ -4,6 +4,7 @@ npm-debug.log
 bower_components
 dist
 *.swp
+.vscode
 .cache
 .idea
 .babelrc
