@@ -619,4 +619,32 @@ hr {
   font-size: 14px;
 }
 
+.column {
+  width: fit-content;
+}
+
+.fc-webicon {
+  background-image: url(/assets/img/webicon-facebook.svg);
+  //width: 65px;
+  //height: 65px;
+}
+
+.fc-webicon-t {
+  background-image: url(/assets/img/webicon-twitter.svg);
+  //width: 65px;
+  //height: 65px;
+}
+
+.fc-webicon-i {
+  background-image: url(/assets/img/webicon-instagram.svg);
+  //width: 65px;
+  //height: 65px;
+}
+
+.image-f {
+  display: inline-flex;
+  width: 55px;
+  height: 55px;
+}
+
 //End Footer
