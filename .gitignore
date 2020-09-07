@@ -7,6 +7,7 @@ dist
 .vscode
 .cache
 .idea
+notes.txt
 .babelrc
 .bowerrc
 .browserslistrc
