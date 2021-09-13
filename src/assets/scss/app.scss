@@ -421,6 +421,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
   }
 
   .promo-offer {
@@ -441,6 +442,13 @@ body {
   a {
     color: #fff;
   }
+}
+
+.promo-box-2 {
+  color: #fff;
+  border: 1px solid #fff;
+  margin-top: 20px;
+  padding: 10px 0 10px 0;
 }
 
 //End Rgt-Side-Info
